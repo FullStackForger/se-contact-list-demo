@@ -25,8 +25,9 @@ export default class Contacts extends Component {
 			return null;
 		}
 
-		return (<div>
-				<h1>Contact list app</h1>
+		return (
+			<div className="section">
+				<h1 className="title">List of contacts</h1>
 				<ContactList contacts={this.state.contacts}/>
 			</div>
 		)

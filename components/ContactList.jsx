@@ -2,7 +2,7 @@ import ContactListItem from './ContactListItem';
 
 export default({ contacts })  => {
 	return (
-		<div className="section">
+		<div>
 			{contacts.map(contact => (
 				<ContactListItem {...contact} key={contact.id} />
 			))}

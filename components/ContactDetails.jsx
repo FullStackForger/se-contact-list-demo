@@ -1,20 +1,40 @@
+import React from 'react';
 import ContactListItem from './ContactListItem';
+import RemovableListItem from './shared/RemovableListItem';
 import './ContactDetails.scss';
 
-export default (contact) => {
 
-	let phoneNumbers = contact.phoneNumbers.map(phone => (
-		<li key={phone}>{phone}</li>
-	));
+export default class PhoneNumbers extends React.Component {
 
-	if (phoneNumbers.length > 0) {
-		phoneNumbers = (<ul className="phones">{phoneNumbers}</ul>)
+	constructor(props = { id: '', phoneNumbers: []}) {
+		super(props);
 	}
 
-	return (
-		<div className="card contact-details" key={contact.id}>
-			<ContactListItem {...contact}/>
-			{phoneNumbers}
-		</div>
-	);
-}
+	renderPhoneNumberList(phoneNumbers) {
+		const phoneList = phoneNumbers.map(phone => (
+			<RemovableListItem key={phone}>{phone}</RemovableListItem>
+		));
+
+		return (
+			<ul className="phone-numbers">
+				{phoneList}
+			</ul>
+		)
+	}
+
+	render() {
+		const {id, phoneNumbers} = this.props;
+
+		let phoneNumberList = null;
+		if (phoneNumbers.length > 0) {
+			phoneNumberList = this.renderPhoneNumberList(phoneNumbers)
+		}
+
+		return (
+			<div className="card contact-details" key={id}>
+				<ContactListItem {...this.props}/>
+				{phoneNumberList}
+			</div>
+		);
+	}
+};

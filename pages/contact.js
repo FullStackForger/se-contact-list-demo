@@ -31,8 +31,8 @@ class Details extends Component {
 			return "missing contact data for id: " + this.state.contactId;
 		}
 		return (
-			<div>
-				<h1>Contact details</h1>
+			<div className="section">
+				<h1 className="title">Contact details</h1>
 				<ContactDetails {...this.state.contact}/>
 			</div>
 		)

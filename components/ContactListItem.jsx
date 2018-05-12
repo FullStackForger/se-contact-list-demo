@@ -1,17 +1,25 @@
+import {Component} from 'react';
 import Link from 'next/link';
+
+import RemovableListItem from './shared/RemovableListItem';
 import './ContactListItem.scss';
 
-export default (contact) => (
-	<div className="level is-ancestor contact-list-item">
-		<div className="contact-list-item--info">
-			<Link href={{pathname: '/contact', query: {id: contact.id}}}>
-				<span>{contact.firstName}&nbsp;{contact.lastName}</span>
-			</Link>
-		</div>
-		<div className="contact-list-item--controls">
-			<a className="button is-small is-danger">
-				<span className="delete is-small"/>Delete
-			</a>
-		</div>
-	</div>
-);
+export default class ContactListItem extends Component {
+	constructor(props) {
+		super(props);
+	}
+
+	render() {
+		const {firstName, lastName, id} = this.props;
+
+		return 	(
+				<RemovableListItem>
+					<Link href={{pathname: '/contact', query: {id}}}>
+						<span className="contact-list-item--link">{firstName} {lastName}</span>
+					</Link>
+				</RemovableListItem>
+
+		)
+	}
+}
+
