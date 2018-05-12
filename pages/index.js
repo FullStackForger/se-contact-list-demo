@@ -1,5 +1,7 @@
+import './index.scss';
+
 export default () => (
-    <div>
-        <h3>Contact list app</h3>
+    <div className="index">
+        <h1>Contact list app</h1>
     </div>
 )
