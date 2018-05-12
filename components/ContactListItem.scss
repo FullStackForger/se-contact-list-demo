@@ -1,0 +1,30 @@
+.contact-list-item {
+
+	margin: 0 !important;
+	padding: 1.5rem;
+
+
+	-ms-box-orient: horizontal;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -moz-flex;
+	display: -webkit-flex;
+
+
+	border-bottom: 1px solid #dedede;
+	&:first-child {
+		border-top: 1px solid #dedede;
+	}
+
+	&--info {
+		float: left;
+	}
+
+	&--controls {
+		float: right;
+		> a > span {
+			margin-right: 10px;
+		}
+	}
+}

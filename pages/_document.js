@@ -1,6 +1,5 @@
-// ./pages/_document.js
 import Document, { Head, Main, NextScript } from 'next/document'
-import './_document.scss';
+import '../styles/main.scss';
 
 export default class MyDocument extends Document {
 	render() {

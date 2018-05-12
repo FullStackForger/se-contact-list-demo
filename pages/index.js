@@ -1,5 +1,4 @@
 import ContactList from '../components/ContactList';
-import './index.scss';
 
 const contacts = [
 	{id: "c1", firstName: "John", lastName: "Doe", phoneNumbers: []},
@@ -8,8 +7,10 @@ const contacts = [
 ];
 
 export default () => (
-	<div className="index">
-		<h1>Contact list app</h1>
-		<ContactList contacts={contacts}/>
+	<div class="container">
+		<div class="notification">
+			<h1>Contact list app</h1>
+			<ContactList contacts={contacts}/>
+		</div>
 	</div>
 );
