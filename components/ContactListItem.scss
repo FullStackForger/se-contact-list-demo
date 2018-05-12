@@ -3,6 +3,10 @@
 	margin: 0 !important;
 	padding: 1.5rem;
 
+	border-bottom: 1px solid #dedede;
+	&:first-child {
+		border-top: 1px solid #dedede;
+	}
 
 	-ms-box-orient: horizontal;
 	display: -webkit-box;
@@ -11,11 +15,10 @@
 	display: -moz-flex;
 	display: -webkit-flex;
 
-
-	border-bottom: 1px solid #dedede;
-	&:first-child {
-		border-top: 1px solid #dedede;
+	& > span {
+		cursor: pointer;
 	}
+
 
 	&--info {
 		float: left;

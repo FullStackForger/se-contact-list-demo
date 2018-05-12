@@ -1,10 +1,12 @@
+import Link from 'next/link';
 import './ContactListItem.scss';
 
-export default ({id, firstName, lastName}) => (
-	<div className="level is-ancestor contact-list-item" key={id}>
+export default (contact) => (
+	<div className="level is-ancestor contact-list-item">
 		<div className="contact-list-item--info">
-			<span>{firstName}</span>&nbsp;
-			<span>{lastName}</span>
+			<Link href={{pathname: '/contact', query: {id: contact.id}}}>
+				<span>{contact.firstName}&nbsp;{contact.lastName}</span>
+			</Link>
 		</div>
 		<div className="contact-list-item--controls">
 			<a className="button is-small is-danger">

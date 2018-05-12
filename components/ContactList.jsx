@@ -4,7 +4,7 @@ export default({ contacts })  => {
 	return (
 		<div className="section">
 			{contacts.map(contact => (
-				<ContactListItem {...contact} />
+				<ContactListItem {...contact} key={contact.id} />
 			))}
 		</div>
 	)
