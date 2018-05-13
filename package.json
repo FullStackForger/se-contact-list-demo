@@ -6,16 +6,25 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "jest --config config/jest.config.js --rootDir ."
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@zeit/next-sass": "^0.2.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^22.4.3",
     "bulma": "^0.7.1",
     "next": "^6.0.1",
     "node-sass": "^4.9.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2"
+  },
+  "devDependencies": {
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "jest": "^22.4.3",
+    "react-test-renderer": "^16.3.2"
   }
 }

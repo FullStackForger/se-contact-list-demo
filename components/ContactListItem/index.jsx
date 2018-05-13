@@ -1,8 +1,8 @@
 import {Component} from 'react';
 import Link from 'next/link';
 
-import RemovableListItem from './shared/RemovableListItem';
-import './ContactListItem.scss';
+import RemovableListItem from '../RemovableListItem';
+import './style.scss';
 
 export default class ContactListItem extends Component {
 	constructor(props) {

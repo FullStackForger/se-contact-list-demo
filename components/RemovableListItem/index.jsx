@@ -1,6 +1,5 @@
 import React from 'react';
-
-import './RemovableListItem.scss';
+import './style.scss';
 
 export default class RemovableListItem extends React.Component {
 	constructor(props) {

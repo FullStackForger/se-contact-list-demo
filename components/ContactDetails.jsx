@@ -1,14 +1,9 @@
 import React from 'react';
 import ContactListItem from './ContactListItem';
-import RemovableListItem from './shared/RemovableListItem';
+import RemovableListItem from './RemovableListItem';
 import './ContactDetails.scss';
 
-
 export default class PhoneNumbers extends React.Component {
-
-	constructor(props = { id: '', phoneNumbers: []}) {
-		super(props);
-	}
 
 	renderPhoneNumberList(phoneNumbers) {
 		const phoneList = phoneNumbers.map(phone => (
@@ -19,7 +14,7 @@ export default class PhoneNumbers extends React.Component {
 			<ul className="phone-numbers">
 				{phoneList}
 			</ul>
-		)
+		);
 	}
 
 	render() {

@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 export default class EditableItem extends React.Component {
 	constructor(props) {
@@ -6,11 +7,12 @@ export default class EditableItem extends React.Component {
 	}
 
 	render() {
+		const {id, firstName, lastName} = this.props;
 		return (
 			<div className="level is-ancestor contact-list-item">
 				<div className="contact-list-item--info">
-					<Link href={{pathname: '/contact', query: {id: contact.id}}}>
-						<span>{contact.firstName}&nbsp;{contact.lastName}</span>
+					<Link href={{pathname: '/contact', query: {id}}}>
+						<span>{firstName}&nbsp;{lastName}</span>
 					</Link>
 				</div>
 				<div className="contact-list-item--controls">
